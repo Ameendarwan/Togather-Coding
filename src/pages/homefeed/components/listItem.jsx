@@ -7,7 +7,7 @@ export default function HomefeedListItem({ type, className, handleCreate }) {
   return (
     <div
       className={`homefeed-list-item-container ${className}`}
-      onClick={handleCreate}
+      onClick={() => handleCreate(type)}
     >
       <img src={type ? callAction : todoIcon} alt="icon" />
       <span className="bold-text-18 pl-20">

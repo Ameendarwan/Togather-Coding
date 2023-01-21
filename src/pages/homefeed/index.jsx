@@ -1,16 +1,37 @@
 import React, { useState } from "react";
 import { Divider, Grid } from "@mui/material";
+import { ReactSortable } from "react-sortablejs";
 import HomefeedListItem from "./components/listItem";
 import Preview from "./components/preview";
 import HomefeedHeader from "./components/header";
 import ListView from "./listView";
+import { findByIndex } from "utils/findIndex";
 import "./style.scss";
 
 export default function Homefeed() {
   const [data, setData] = useState([]);
-  const handleCreate = () => {
-    console.log("YES");
+
+  const handleCreate = (type) => {
+    let items = [...data];
+    let addItem = {
+      id: Date.now(),
+      type,
+      hidden: false,
+    };
+    items.push(addItem);
+    setData(items);
   };
+
+  const handleList = (id, actionType) => {
+    let items = [...data];
+    let index = findByIndex(items, "id", id);
+    if (index > -1) {
+      if (actionType) items.splice(index, 1);
+      else items[index].hidden = !items[index].hidden;
+    }
+    setData(items);
+  };
+
   return (
     <Grid container className="homefeed" justifyContent={"space-between"}>
       <Grid item xs={12} sm={12} md={4} lg={3} xl={3}>
@@ -25,13 +46,13 @@ export default function Homefeed() {
         </div>
       </Grid>
       <Grid item xs={12} sm={12} md={4} lg={3} xl={3} className="mt-75">
-        {Array(5)
-          .fill("")
-          .map((val) => (
-            <div className="my-20" key={val}>
-              <ListView />
+        <ReactSortable list={data} setList={setData}>
+          {data?.map((val) => (
+            <div className="my-20" key={val.id}>
+              <ListView item={val} handleList={handleList} />
             </div>
           ))}
+        </ReactSortable>
       </Grid>
       <Grid item xs={12} sm={12} md={6} lg={5} xl={5} />
     </Grid>
