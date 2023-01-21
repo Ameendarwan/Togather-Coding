@@ -1,0 +1,85 @@
+@import "../../assets/scss/index.scss";
+
+.homefeed {
+  &-container {
+    box-sizing: border-box;
+    height: 100vh;
+    background: $bg-white;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    overflow-y: hidden;
+    padding: 20px;
+  }
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+  }
+  &-title {
+    @include heading(28px, 800, $primaryBlackColor);
+    padding-left: 10px;
+  }
+  &-preview {
+    display: flex;
+    align-items: center;
+    background-color: $bg-grey;
+    border-radius: 12px;
+    padding: 16px;
+    span {
+      @include heading(18px, 600, $primaryBlackColor);
+    }
+  }
+  &-add {
+    position: relative !important;
+    padding: 5px;
+    background: $bg-grey2;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  &-list-item {
+    &-container {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+    }
+  }
+  &-list-view {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $bg-grey;
+    border-radius: 16px;
+    padding: 0px 24px;
+    box-sizing: border-box;
+    &-left {
+      display: flex;
+      align-items: center;
+    }
+    &-right {
+      @extend .homefeed-list-view-left;
+    }
+  }
+  &-popver {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: $bg-white;
+    border: 2px solid $bg-grey;
+    border-radius: 14px;
+    width: 20vw;
+    padding: 0px 10px;
+  }
+
+  img {
+    cursor: pointer;
+  }
+}
+
+/* Overwrite Material UI Classes */
+.MuiPopover-root .MuiPopover-paper {
+  border: none !important;
+  box-shadow: none !important;
+  top: 7% !important;
+}

@@ -1,3 +1,13 @@
 @import "./mixins";
 @import "./variables";
 @import "./common";
+
+body {
+  font-family: "Inter" !important;
+  margin: 0px;
+  padding: 0px;
+}
+
+* {
+  box-sizing: border-box !important;
+}

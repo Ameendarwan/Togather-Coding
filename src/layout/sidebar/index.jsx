@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
   Box,
-  Divider,
   IconButton,
   List,
   ListItem,
@@ -12,7 +11,7 @@ import {
 } from "@mui/material";
 
 import expandIcon from "assets/icons/Expand.svg";
-import { sidebarItems } from "config/sidebarItems";
+import { sidebarItems } from "./constants";
 import { routeNames } from "routes/constants";
 import { DrawerHeader, Drawer } from "config/drawer";
 import "./style.scss";
@@ -33,14 +32,13 @@ export default function MiniDrawer({ children }) {
   };
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex" }} className="sidebar">
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
           <IconButton onClick={handleDrawerOpen} className="pr-3">
             <img src={expandIcon} alt="expand" />
           </IconButton>
         </DrawerHeader>
-        <Divider />
         <List>
           {sidebarItems.map((o) => (
             <ListItem
@@ -60,7 +58,7 @@ export default function MiniDrawer({ children }) {
           ))}
         </List>
       </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+      <Box component="main" sx={{ flexGrow: 1 }}>
         {children}
       </Box>
     </Box>

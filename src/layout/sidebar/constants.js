@@ -44,7 +44,7 @@ export const sidebarItems = [
     id: 6,
     title: "Homefeed",
     icon: homefeed,
-    route: routeNames.login.route,
+    route: routeNames.homefeed.route,
   },
   {
     id: 7,

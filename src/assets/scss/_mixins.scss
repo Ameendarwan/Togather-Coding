@@ -46,8 +46,8 @@
   }
 }
 
-@mixin heading($size, $family, $color) {
+@mixin heading($size, $font, $color) {
   font-size: $size;
-  font-family: $family;
+  font-weight: $font;
   color: $color;
 }

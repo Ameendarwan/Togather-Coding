@@ -1,5 +1,16 @@
 @import "../../assets/scss/index.scss";
 
-.MuiIconButton-root {
-  margin-right: 10px !important;
+.sidebar {
+  /* Overwrite Material UI Classes */
+  .MuiIconButton-root {
+    margin-right: 10px !important;
+  }
+
+  .css-2dum1v-MuiDrawer-docked {
+    width: 60px !important;
+  }
+
+  .MuiListItem-root {
+    padding: 5px 0px !important;
+  }
 }

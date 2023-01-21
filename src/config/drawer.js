@@ -36,6 +36,7 @@ export const Drawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({
   width: `calc(100% - ${drawerWidth}px)`,
+  backgroundColor: "#FAFAFA",
   flexShrink: 0,
   whiteSpace: "nowrap",
   boxSizing: "border-box",
