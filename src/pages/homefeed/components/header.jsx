@@ -4,9 +4,11 @@ import HomefeedPopoverContent from "./popoverContent";
 import homefeedIcon from "assets/icons/Homefeed2.svg";
 import addIcon from "assets/icons/Add.svg";
 
-export default function HomefeedHeader({ handleCreate }) {
-  const [anchorEl, setAnchorEl] = useState(null);
-
+export default function HomefeedHeader({
+  handleCreate,
+  anchorEl,
+  setAnchorEl,
+}) {
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
   };
@@ -19,13 +21,18 @@ export default function HomefeedHeader({ handleCreate }) {
   const id = open ? "simple-popover" : undefined;
 
   return (
-    <div className="homefeed-header">
-      <div className="display-flex align-items-center">
+    <div className="homefeed-header mt-30">
+      <div className="homefeed-header-left">
         <img src={homefeedIcon} alt="homefeed" />
-        <span className="homefeed-title">Homefeed</span>
+        <span className="homefeed-header-title">Homefeed</span>
       </div>
       <div className="homefeed-add">
-        <img src={addIcon} alt="add" onClick={handleClick} />
+        <img
+          src={addIcon}
+          alt="add"
+          onClick={handleClick}
+          className="homefeed-add-img"
+        />
         <Popover
           id={id}
           open={open}

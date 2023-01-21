@@ -14,6 +14,7 @@ import expandIcon from "assets/icons/Expand.svg";
 import { sidebarItems } from "./constants";
 import { routeNames } from "routes/constants";
 import { DrawerHeader, Drawer } from "config/drawer";
+import userIcon from "assets/icons/User.svg";
 import "./style.scss";
 
 export default function MiniDrawer({ children }) {
@@ -33,13 +34,13 @@ export default function MiniDrawer({ children }) {
 
   return (
     <Box sx={{ display: "flex" }} className="sidebar">
-      <Drawer variant="permanent" open={open}>
+      <Drawer variant="permanent" open={open} className="position-relative">
         <DrawerHeader>
-          <IconButton onClick={handleDrawerOpen} className="pr-3">
+          <IconButton onClick={handleDrawerOpen} className="pr-3 mt-20">
             <img src={expandIcon} alt="expand" />
           </IconButton>
         </DrawerHeader>
-        <List>
+        <List className="mt-20">
           {sidebarItems.map((o) => (
             <ListItem
               key={o.id}
@@ -57,6 +58,15 @@ export default function MiniDrawer({ children }) {
             </ListItem>
           ))}
         </List>
+        <div className="sidebar-user">
+          <List>
+            <ListItem>
+              <ListItemIcon>
+                <img src={userIcon} alt="users" />
+              </ListItemIcon>
+            </ListItem>
+          </List>
+        </div>
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1 }}>
         {children}

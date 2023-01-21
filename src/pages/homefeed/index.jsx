@@ -10,8 +10,10 @@ import "./style.scss";
 
 export default function Homefeed() {
   const [data, setData] = useState([]);
+  const [anchorEl, setAnchorEl] = useState(null);
 
   const handleCreate = (type) => {
+    setAnchorEl(null);
     let items = [...data];
     let addItem = {
       id: Date.now(),
@@ -34,27 +36,31 @@ export default function Homefeed() {
 
   return (
     <Grid container className="homefeed" justifyContent={"space-between"}>
-      <Grid item xs={12} sm={12} md={4} lg={3} xl={3}>
+      <Grid item xs={12} sm={12} md={6} lg={3} xl={3}>
         <div className="homefeed-container">
-          <HomefeedHeader handleCreate={handleCreate} />
+          <HomefeedHeader
+            handleCreate={handleCreate}
+            anchorEl={anchorEl}
+            setAnchorEl={setAnchorEl}
+          />
           <Preview />
           <Divider />
-          <div className="mt-20">
+          <div className="mt-15 p-20">
             <HomefeedListItem type={1} />
-            <HomefeedListItem type={0} className="mt-15" />
+            <HomefeedListItem type={0} className="mt-40" />
           </div>
         </div>
       </Grid>
-      <Grid item xs={12} sm={12} md={4} lg={3} xl={3} className="mt-75">
+      <Grid item xs={12} sm={12} md={6} lg={3} xl={3} className="mt-75">
         <ReactSortable list={data} setList={setData}>
           {data?.map((val) => (
-            <div className="my-20" key={val.id}>
+            <div className="my-15" key={val.id}>
               <ListView item={val} handleList={handleList} />
             </div>
           ))}
         </ReactSortable>
       </Grid>
-      <Grid item xs={12} sm={12} md={6} lg={5} xl={5} />
+      <Grid item xs={12} sm={12} md={12} lg={5} xl={5} />
     </Grid>
   );
 }

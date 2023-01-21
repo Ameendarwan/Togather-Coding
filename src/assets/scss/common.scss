@@ -4,6 +4,11 @@
 .bold-text-18 {
   @include heading(18px, 600, $primaryBlackColor);
 }
+
+.normal-text-16 {
+  @include heading(16px, 500, $primaryBlackColor);
+}
+
 .border-none {
   border: none !important;
 }
@@ -109,7 +114,11 @@
 }
 
 .my-10 {
-  margin: 20px 0px !important;
+  margin: 10px 0px !important;
+}
+
+.my-15 {
+  margin: 15px 0px !important;
 }
 
 .my-20 {
@@ -249,6 +258,21 @@
 
 .mb-rem-7 {
   margin-top: 7rem !important;
+}
+.py-10 {
+  padding: 10px 0px !important;
+}
+
+.py-20 {
+  padding: 20px 0px !important;
+}
+
+.py-30 {
+  padding: 30px 0px !important;
+}
+
+.py-40 {
+  padding: 40px 0px !important;
 }
 
 .px-10 {

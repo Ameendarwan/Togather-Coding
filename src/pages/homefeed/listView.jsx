@@ -34,7 +34,7 @@ export default function ListView({ item, handleList }) {
     >
       <div className="homefeed-list-view-left">
         <img src={menuIconOff} alt="menu" ref={menuIconRef} />
-        <HomefeedListItem type={item.type} />
+        <HomefeedListItem type={item.type} className="pl-20" />
       </div>
       <div className="homefeed-list-view-right">
         <img
