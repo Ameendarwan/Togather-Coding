@@ -12,7 +12,7 @@ import {
 
 import expandIcon from "assets/icons/Expand.svg";
 import { sidebarItems } from "./constants";
-import { routeNames } from "routes/constants";
+import { routeNames } from "routes/routeNames";
 import { DrawerHeader, Drawer } from "config/drawer";
 import userIcon from "assets/icons/User.svg";
 import "./style.scss";

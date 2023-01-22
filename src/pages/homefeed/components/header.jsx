@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Popover } from "@mui/material";
 import HomefeedPopoverContent from "./popoverContent";
 import homefeedIcon from "assets/icons/Homefeed2.svg";

@@ -5,6 +5,7 @@ import HomefeedListItem from "./components/listItem";
 import Preview from "./components/preview";
 import HomefeedHeader from "./components/header";
 import ListView from "./listView";
+import MobilePreview from "./mobilePreview";
 import { findByIndex } from "utils/findIndex";
 import "./style.scss";
 
@@ -60,7 +61,10 @@ export default function Homefeed() {
           ))}
         </ReactSortable>
       </Grid>
-      <Grid item xs={12} sm={12} md={12} lg={5} xl={5} />
+      <Grid item xs={12} sm={12} md={12} lg={3} xl={2.5} className="my-auto">
+        <MobilePreview data={data} />
+      </Grid>
+      <Grid item xs={12} sm={12} md={12} lg={2} xl={1.5} />
     </Grid>
   );
 }

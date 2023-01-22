@@ -40,7 +40,6 @@
   &-add {
     position: relative !important;
     background: $bg-grey2;
-    cursor: pointer;
     width: 32px;
     height: 32px;
     background: #fafafa;
@@ -93,6 +92,88 @@
       padding: 15px 20px;
     }
   }
+  &-mobile {
+    position: relative;
+    @include breakpoint(largeDesktop) {
+      height: 100%;
+    }
+    &-main-container {
+      position: relative;
+      background: $bg-white;
+      border: 16px solid $primaryBlackColor;
+      border-radius: 53px;
+      width: 100%;
+    }
+    &-sub-container {
+      position: relative;
+      padding: 20px 20px 7px 20px;
+      &-top-part {
+        position: relative;
+        &-body {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+      &-bottom-part {
+        &-body {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          position: relative;
+          padding: 0px 10px;
+        }
+        &-center-img {
+          border-bottom: 4px solid $bg-black;
+          padding: 20px 45px;
+        }
+      }
+      &-body {
+        position: relative;
+        overflow-y: scroll;
+        height: 60vh;
+        overflow-x: hidden !important;
+        margin-top: 20px;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        &-msgs-container {
+          &-label {
+            @include heading(12px, 600, $text-color);
+          }
+        }
+        &-todo-container {
+          display: flex;
+          align-items: center;
+          background: $bg-white;
+          box-shadow: 0px 1.70149px 5.10448px rgba(0, 0, 0, 0.06);
+          border-radius: 13.6119px;
+          padding: 14px 20px;
+          span {
+            @include heading(13.5px, 600, $primaryBlackColor);
+            padding-left: 10px;
+          }
+        }
+        &-action-container {
+          box-shadow: 0px 1.70149px 5.10448px rgba(0, 0, 0, 0.06);
+          border-radius: 13.6119px;
+          &-image {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+          }
+          &-btn {
+            background: $bg-white;
+            border: 1.70149px solid $primaryBlackColor;
+            border-radius: 85.0746px;
+            @include heading(13.5px, 600, $primaryBlackColor);
+            padding: 8px 20px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 
   img {
     cursor: pointer;
@@ -105,4 +186,7 @@
   box-shadow: none !important;
   top: 10% !important;
   background-color: transparent !important;
+}
+.MuiSkeleton-root {
+  background-color: $bg-grey !important;
 }

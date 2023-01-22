@@ -303,6 +303,10 @@
   padding: 10px !important;
 }
 
+.p-15 {
+  padding: 10px !important;
+}
+
 .p-8 {
   padding: 8px !important;
 }
@@ -405,7 +409,11 @@
 }
 
 .margin-auto {
-  margin: auto;
+  margin: auto !important;
+}
+
+.my-auto {
+  margin: auto 0px !important;
 }
 
 .font-10 {
@@ -455,7 +463,12 @@
   font-family: "Poppins Bold", sans-serif !important;
 }
 
-//scrollbar styling
+/* scrollbar styling */
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   height: 4px;

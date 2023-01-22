@@ -1,4 +1,4 @@
-import { routeNames } from "routes/constants";
+import { routeNames } from "routes/routeNames";
 import home from "assets/icons/Home.svg";
 import member from "assets/icons/Member.svg";
 import members from "assets/icons/Members.svg";
