@@ -8,7 +8,7 @@ added to the homefeed: To-do’s and Call to Actions. Each element can be added 
 ### Packages Installed
 
 - **Material UI v5** MUI offers a comprehensive suite of UI tools to help you ship new features faster. It is a fully-loaded component library, design system for production-ready components.
-- **SASS** SASS (Syntactically Awesome Stylesheets) is a CSS pre-processor which has variables, mathematical operations, mixins, loops, functions, imports, and other interesting functionalities that make writing CSS much more powerful.
+- **SASS** (Syntactically Awesome Stylesheets) is a CSS pre-processor which has variables, mathematical operations, mixins, loops, functions, imports, and other interesting functionalities that make writing CSS much more powerful.
 - **React SortableJs** for reorderable drag-and-drop lists on modern browsers and touch devices
 - **@fontsource/inter** for Inter font-family
 - **React Router Dom** for routing in the app
@@ -17,9 +17,11 @@ added to the homefeed: To-do’s and Call to Actions. Each element can be added 
 
 To setup project, run the following commands:
 
+```sh
 cd togather-code-ameen
 npm i
 npm start
+```
 
 ### Deployment
 
