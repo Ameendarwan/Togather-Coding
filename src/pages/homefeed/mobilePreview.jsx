@@ -71,7 +71,7 @@ function MobilePreview({ data }) {
             {data
               ?.filter((obj) => !obj.hidden) // To only show visible items
               ?.map((val) => (
-                <div className="my-20">
+                <div className="my-20" key={val.id}>
                   {val.type ? (
                     <CallToAction id={val.id} classes="my-10" />
                   ) : (
