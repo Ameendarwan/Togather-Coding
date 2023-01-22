@@ -12,7 +12,7 @@ function MobilePreview({ data }) {
       <div className="homefeed-mobile-main-container">
         <div className="homefeed-mobile-sub-container">
           <div className="homefeed-mobile-sub-container-top-part">
-            <div className="homefeed-mobile-sub-container-top-part-body mt-20">
+            <div className="homefeed-mobile-sub-container-top-part-body">
               <img src={mobileUserIcon} alt="user" />
               <img src={mobileCheckIcon} alt="check" />
             </div>
