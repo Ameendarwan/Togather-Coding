@@ -1,10 +1,10 @@
 export const routeNames = {
-  dashboard: {
+  homefeed: {
     route: "/",
     isProtected: false,
   },
-  homefeed: {
-    route: "/homefeed",
+  notExist: {
+    route: "/not-found",
     isProtected: false,
   },
 };

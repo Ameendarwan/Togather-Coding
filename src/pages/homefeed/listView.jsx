@@ -9,7 +9,7 @@ import eyeIconOnDisabled from "assets/icons/Eye-on-disabled.svg";
 import menuIconOn from "assets/icons/Menu-on.svg";
 import menuIconOff from "assets/icons/Menu-off.svg";
 
-export default function ListView({ item, handleList }) {
+function ListView({ item, handleList }) {
   const deleteIconRef = useRef();
   const eyeIconRef = useRef();
   const menuIconRef = useRef();
@@ -42,15 +42,17 @@ export default function ListView({ item, handleList }) {
           alt="delete"
           ref={deleteIconRef}
           className="pr-20"
-          onClick={() => handleList(item.id, 1)}
+          onClick={() => handleList(item.id, 1)} // To delete selected item
         />
         <img
-          src={item.hidden ? eyeIconOffDisabled : eyeIconOff}
-          alt="view"
+          src={item.hidden ? eyeIconOffDisabled : eyeIconOff} // By default, it would be eyeIconOff
+          alt="show/hide"
           ref={eyeIconRef}
-          onClick={() => handleList(item.id, 0)}
+          onClick={() => handleList(item.id, 0)} // To show/hide selected item
         />
       </div>
     </div>
   );
 }
+
+export default React.memo(ListView);

@@ -3,13 +3,7 @@ import todoIcon from "assets/icons/Todo.svg";
 import callAction from "assets/icons/Action.svg";
 import "assets/scss/index.scss";
 
-export default function HomefeedListItem({
-  type,
-  className,
-  handleCreate,
-  titleClass,
-  img,
-}) {
+function HomefeedListItem({ type, className, handleCreate, titleClass, img }) {
   const displayIcon = type ? callAction : todoIcon;
   return (
     <div
@@ -23,3 +17,5 @@ export default function HomefeedListItem({
     </div>
   );
 }
+
+export default React.memo(HomefeedListItem);

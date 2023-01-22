@@ -5,7 +5,8 @@ import mobileCheckIcon from "assets/icons/Mobile-check.svg";
 import CallToAction from "./components/callToAction";
 import MobileListItem from "./components/mobileListItem";
 import MobileFooter from "./components/mobileFooter";
-export default function MobilePreview({ data }) {
+
+function MobilePreview({ data }) {
   return (
     <div className="homefeed-mobile">
       <div className="homefeed-mobile-main-container">
@@ -68,7 +69,7 @@ export default function MobilePreview({ data }) {
             <Divider />
 
             {data
-              ?.filter((obj) => !obj.hidden)
+              ?.filter((obj) => !obj.hidden) // To only show visible items
               ?.map((val) => (
                 <div className="my-20">
                   {val.type ? (
@@ -86,3 +87,5 @@ export default function MobilePreview({ data }) {
     </div>
   );
 }
+
+export default React.memo(MobilePreview);

@@ -4,11 +4,7 @@ import HomefeedPopoverContent from "./popoverContent";
 import homefeedIcon from "assets/icons/Homefeed2.svg";
 import addIcon from "assets/icons/Add.svg";
 
-export default function HomefeedHeader({
-  handleCreate,
-  anchorEl,
-  setAnchorEl,
-}) {
+function HomefeedHeader({ handleCreate, anchorEl, setAnchorEl }) {
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
   };
@@ -49,3 +45,5 @@ export default function HomefeedHeader({
     </div>
   );
 }
+
+export default React.memo(HomefeedHeader);

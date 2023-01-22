@@ -21,7 +21,7 @@ export default function Homefeed() {
       type,
       hidden: false,
     };
-    items.push(addItem);
+    items.push(addItem); // To add new item in the list
     setData(items);
   };
 
@@ -29,8 +29,8 @@ export default function Homefeed() {
     let items = [...data];
     let index = findByIndex(items, "id", id);
     if (index > -1) {
-      if (actionType) items.splice(index, 1);
-      else items[index].hidden = !items[index].hidden;
+      if (actionType) items.splice(index, 1); // To remove item from the list
+      else items[index].hidden = !items[index].hidden; // To hide/show item in the list
     }
     setData(items);
   };
