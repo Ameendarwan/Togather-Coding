@@ -1,7 +1,7 @@
 import React from "react";
 import { Divider, Skeleton } from "@mui/material";
 import mobileUserIcon from "assets/icons/Mobile-user.svg";
-import mobileCheckIcon from "assets/icons/Mobile-check.svg";
+import mobileCheckIcon from "assets/icons/Mobile-Preview-Check.svg";
 import CallToAction from "./components/callToAction";
 import MobileListItem from "./components/mobileListItem";
 import MobileFooter from "./components/mobileFooter";
