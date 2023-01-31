@@ -18,7 +18,7 @@ added to the homefeed: To-do’s and Call to Actions. Each element can be added 
 To setup project, run the following commands:
 
 ```sh
-cd togather-code-ameen
+cd Togather-Coding
 npm i
 npm start
 ```
